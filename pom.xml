@@ -249,7 +249,7 @@
 		<distributionManagement>
 		<repository>
 			<id>bintray</id>
-			<url>https://api.bintray.com/maven/paultegelaar/maven/liquid-os</url>
+			<url>https://api.bintray.com/maven/paultegelaar/maven/liquid-relay-camel-osgi</url>
 		</repository>
 		<snapshotRepository>
 			<id>pte-snapshots</id>
