@@ -17,6 +17,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<scm>
+		<connection>scm:git:https://github.com/rjptegelaar/liquid-relay-camel-osgi.git</connection>
+		<developerConnection>scm:git:git@github.com:rjptegelaar/liquid-relay-camel-osgi.git</developerConnection>
+		<url>https://github.com/rjptegelaar/liquid-relay-camel-osgi.git</url>
+    <tag>HEAD</tag>
+  </scm>  
+
 	<dependencies>
 		<dependency>
 			<groupId>org.osgi</groupId>
