@@ -67,7 +67,7 @@
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>liquid-relay-camel-simple</artifactId>
-			<version>0.0.11</version>
+			<version>0.0.12</version>
 			<scope>runtime</scope>
 		</dependency>
 		
