@@ -111,7 +111,7 @@
 					<instructions>
 						<Import-Package>com.pte.liquid.relay.*,org.apache.camel;version="[2.12.0,3.0.0)",!com.mysema.query.types,!com.mysema.query.types.path,!javax.persistence,!javax.security.auth.login,!javax.xml.bind.annotation,!javax.xml.bind.annotation.adapters,!org.slf4j,!org.springframework.scheduling.annotation,*</Import-Package>
 						<Bundle-Activator>com.pte.liquid.relay.Activator</Bundle-Activator>
-						<Export-Package>com.pte.liquid.relay,com.pte.liquid.relay.camel.bean</Export-Package>
+						<Export-Package>com.pte.liquid.relay,com.pte.liquid.relay.camel.bean,com.pte.liquid.relay.camel.component,com.pte.liquid.relay.camel.converter,com.pte.liquid.relay.camel.processor</Export-Package>
 						<Embed-Dependency>*;scope=runtime</Embed-Dependency>
 					</instructions>					
 				</configuration>								
