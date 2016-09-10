@@ -35,7 +35,7 @@
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>RelayApi</artifactId>
-			<version>0.1.7</version>
+			<version>0.1.8</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>gozirra-client</artifactId>
@@ -69,6 +69,12 @@
 			<artifactId>liquid-relay-camel-simple</artifactId>
 			<version>0.0.12</version>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+		  <groupId>com.pte.liquid.relay</groupId>
+		  <artifactId>liquid-relay-camel</artifactId>
+		  <version>0.0.11</version>
+		 <scope>runtime</scope>
 		</dependency>
 		
 		<!-- GSON -->
