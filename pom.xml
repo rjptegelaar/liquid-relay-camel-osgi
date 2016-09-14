@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>liquid-relay-camel-osgi</artifactId>
-	<version>0.0.11-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	
 	<parent>
 		<groupId>com.pte.liquid.relay</groupId>
 		<artifactId>liquid-parent</artifactId>
-		<version>0.0.7</version>
+		<version>1.0.0</version>
 	</parent>
 
 	<name>liquid-relay-camel-osgi</name>
@@ -35,7 +35,7 @@
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>RelayApi</artifactId>
-			<version>0.1.8</version>
+			<version>1.0.0</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>gozirra-client</artifactId>
@@ -55,26 +55,20 @@
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>liquid-relay-camel-converter</artifactId>
-			<version>0.0.4</version>
-			<scope>runtime</scope>
+			<version>1.0.0</version>
+			<scope>runtime</scope>			
 		</dependency>
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>RelayInterfaces</artifactId>
-			<version>0.1.14</version>
+			<version>1.0.0</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>liquid-relay-camel-simple</artifactId>
-			<version>0.0.13</version>
+			<version>1.0.0</version>
 			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-		  <groupId>com.pte.liquid.relay</groupId>
-		  <artifactId>liquid-relay-camel</artifactId>
-		  <version>0.0.11</version>
-		 <scope>runtime</scope>
 		</dependency>
 		
 		<!-- GSON -->
@@ -109,9 +103,9 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Import-Package>com.pte.liquid.relay.*,org.apache.camel;version="[2.12.0,3.0.0)",!com.mysema.query.types,!com.mysema.query.types.path,!javax.persistence,!javax.security.auth.login,!javax.xml.bind.annotation,!javax.xml.bind.annotation.adapters,!org.slf4j,!org.springframework.scheduling.annotation,*</Import-Package>
+						<Import-Package>com.pte.liquid.relay.*,org.apache.camel;version="[2.12.0,3.0.0)",org.apache.camel.impl;version="[2.12.0,3.0.0)",!com.mysema.query.types,!com.mysema.query.types.path,!javax.persistence,!javax.security.auth.login,!javax.xml.bind.annotation,!javax.xml.bind.annotation.adapters,!org.slf4j,!org.springframework.scheduling.annotation,*</Import-Package>
 						<Bundle-Activator>com.pte.liquid.relay.Activator</Bundle-Activator>
-						<Export-Package>com.pte.liquid.relay,com.pte.liquid.relay.camel.bean,com.pte.liquid.relay.camel.component,com.pte.liquid.relay.camel.converter,com.pte.liquid.relay.camel.processor</Export-Package>
+						<Export-Package>com.pte.liquid.relay,com.pte.liquid.relay.camel.converter,com.pte.liquid.relay.camel.bean,com.pte.liquid.relay.camel.processor</Export-Package>
 						<Embed-Dependency>*;scope=runtime</Embed-Dependency>
 					</instructions>					
 				</configuration>								
