@@ -88,17 +88,17 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-		  <groupId>com.pte.liquid.relay</groupId>
-		  <artifactId>liquid-legacy-async</artifactId>
-		  <version>1.0.0</version>
-		  <scope>runtime</scope>
-		  <exclusions>
+			<groupId>com.pte.liquid.relay</groupId>
+			<artifactId>liquid-legacy-async</artifactId>
+			<version>1.0.0</version>
+			<scope>runtime</scope>
+			<exclusions>
 				<exclusion>
 					<artifactId>RelayInterfaces</artifactId>
 					<groupId>com.pte.liquid.relay</groupId>
 				</exclusion>
 			</exclusions>
-  		</dependency>
+		</dependency>
 
 
 		<!-- GSON -->
@@ -147,7 +147,9 @@
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<remoteTagging>true</remoteTagging>
 					<resume>false</resume>
+
 				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>
@@ -165,6 +167,7 @@
 				<!-- To include a shell: <dependency> <groupId>org.apache.felix</groupId> 
 					<artifactId>org.apache.felix.gogo.shell</artifactId> <version>0.10.0</version> 
 					</dependency> -->
+
 			</dependencies>
 			<build>
 				<plugins>
