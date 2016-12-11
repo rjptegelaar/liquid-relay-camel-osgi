@@ -56,7 +56,7 @@
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>liquid-relay-camel-converter</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<version>1.0.1</version>
 			<scope>runtime</scope>
 			<exclusions>
 				<exclusion>
@@ -74,7 +74,7 @@
 		<dependency>
 			<groupId>com.pte.liquid.relay</groupId>
 			<artifactId>liquid-relay-camel-simple</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
+			<version>1.0.2</version>
 			<scope>runtime</scope>
 			<exclusions>
 				<exclusion>
