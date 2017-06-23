@@ -5,9 +5,9 @@
 	<packaging>bundle</packaging>
 
 	<parent>
-		<groupId>com.pte.liquid.relay</groupId>
+		<groupId>nl.paultegelaar.liquid.relay</groupId>
 		<artifactId>liquid-parent</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.1</version>
 	</parent>
 
 	<name>liquid-relay-camel-osgi</name>
@@ -33,9 +33,9 @@
 
 		<!-- LIQUID -->
 		<dependency>
-			<groupId>com.pte.liquid.relay</groupId>
+			<groupId>nl.paultegelaar.liquid.relay</groupId>
 			<artifactId>RelayApi</artifactId>
-			<version>1.0.1</version>
+			<version>1.0.2</version>
 			<exclusions>
 				<exclusion>
 					<artifactId>gozirra-client</artifactId>
@@ -47,41 +47,41 @@
 				</exclusion>
 				<exclusion>
 					<artifactId>RelayInterfaces</artifactId>
-					<groupId>com.pte.liquid.relay</groupId>
+					<groupId>nl.paultegelaar.liquid.relay</groupId>
 				</exclusion>
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.pte.liquid.relay</groupId>
+			<groupId>nl.paultegelaar.liquid.relay</groupId>
 			<artifactId>liquid-relay-camel-converter</artifactId>
-			<version>1.0.1</version>
+			<version>1.0.2</version>
 			<scope>runtime</scope>
 			<exclusions>
 				<exclusion>
 					<artifactId>RelayInterfaces</artifactId>
-					<groupId>com.pte.liquid.relay</groupId>
+					<groupId>nl.paultegelaar.liquid.relay</groupId>
 				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>com.pte.liquid.relay</groupId>
+			<groupId>nl.paultegelaar.liquid.relay</groupId>
 			<artifactId>RelayInterfaces</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.pte.liquid.relay</groupId>
+			<groupId>nl.paultegelaar.liquid.relay</groupId>
 			<artifactId>liquid-relay-camel-simple</artifactId>
-			<version>1.0.3</version>
+			<version>1.0.4</version>
 			<scope>runtime</scope>
 			<exclusions>
 				<exclusion>
-					<groupId>com.pte.liquid.relay</groupId>
+					<groupId>nl.paultegelaar.liquid.relay</groupId>
 					<artifactId>RelayApi</artifactId>
 				</exclusion>
 				<exclusion>
-					<groupId>com.pte.liquid.relay</groupId>
+					<groupId>nl.paultegelaar.liquid.relay</groupId>
 					<artifactId>liquid-relay-camel-converter</artifactId>
 				</exclusion>
 			</exclusions>
@@ -120,9 +120,9 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Import-Package>com.pte.liquid.relay.*,org.apache.camel;version="[2.12.0,3.0.0)",org.apache.camel.impl;version="[2.12.0,3.0.0)",!com.mysema.query.types,!com.mysema.query.types.path,!javax.persistence,!javax.security.auth.login,!javax.xml.bind.annotation,!javax.xml.bind.annotation.adapters,!org.slf4j,!org.springframework.scheduling.annotation,*</Import-Package>
-						<Bundle-Activator>com.pte.liquid.relay.Activator</Bundle-Activator>
-						<Export-Package>com.pte.liquid.async,com.pte.liquid.relay,com.pte.liquid.relay.camel.converter,com.pte.liquid.relay.camel.bean,com.pte.liquid.relay.camel.processor</Export-Package>
+						<Import-Package>nl.paultegelaar.liquid.relay.*,org.apache.camel;version="[2.12.0,3.0.0)",org.apache.camel.impl;version="[2.12.0,3.0.0)",!com.mysema.query.types,!com.mysema.query.types.path,!javax.persistence,!javax.security.auth.login,!javax.xml.bind.annotation,!javax.xml.bind.annotation.adapters,!org.slf4j,!org.springframework.scheduling.annotation,*</Import-Package>
+						<Bundle-Activator>nl.paultegelaar.liquid.relay.Activator</Bundle-Activator>
+						<Export-Package>nl.paultegelaar.liquid.async,nl.paultegelaar.liquid.relay,nl.paultegelaar.liquid.relay.camel.converter,nl.paultegelaar.liquid.relay.camel.bean,nl.paultegelaar.liquid.relay.camel.processor</Export-Package>
 						<Embed-Dependency>*;scope=runtime</Embed-Dependency>
 					</instructions>
 				</configuration>
@@ -138,6 +138,23 @@
 				</configuration>
 
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+						<configuration>						
+							<keyname>paultegelaar</keyname>
+							<passphrase>${gpg-passphrase}</passphrase>														
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>		
 		</plugins>
 	</build>
 
@@ -213,7 +230,7 @@
 								</configuration>
 							</execution>
 						</executions>
-					</plugin>
+					</plugin>					
 				</plugins>
 			</build>
 		</profile>
@@ -277,4 +294,21 @@
 			<url>${snapshots-url}</url>
 		</snapshotRepository>
 	</distributionManagement>
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Paul Tegelaar</name>
+			<email>tegelaarpaul@gmail.com</email>
+			<organization>Paul Tegelaar</organization>
+			<organizationUrl>http://www.paultegelaar.nl</organizationUrl>
+		</developer>
+	</developers>
+	<description>OSGI bundle containing camel components, used within Talend Runtime.</description>
+	<url>https://github.com/rjptegelaar/liquid-relay-camel-osgi</url>
 </project>
