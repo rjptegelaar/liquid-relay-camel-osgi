@@ -84,9 +84,17 @@
 					<groupId>nl.paultegelaar.liquid.relay</groupId>
 					<artifactId>liquid-relay-camel-converter</artifactId>
 				</exclusion>
+				<exclusion>
+					<groupId>nl.paultegelaar.liquid.relay</groupId>
+					<artifactId>liquid-legacy-async</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>		
-
+		<dependency>
+			<groupId>nl.paultegelaar.liquid.relay</groupId>
+			<artifactId>liquid-legacy-async</artifactId>
+			<version>1.0.2</version>
+		</dependency>
 
 		<!-- GSON -->
 		<dependency>
